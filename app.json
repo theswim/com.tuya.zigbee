@@ -2664,6 +2664,131 @@
       ]
     },
     {
+      "id": "custom_radar_sensor_2",
+      "name": {
+        "en": "10GHz mmWave Presence Sensor (Battery)",
+        "nl": "10GHz mmWave Presence Sensor (Battery)"
+      },
+      "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "capabilities": [
+        "alarm_motion",
+        "measure_battery",
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA",
+          "AAA"
+        ]
+      },
+      "images": {
+        "large": "/drivers/custom_radar_sensor_2/assets/images/large.png",
+        "small": "/drivers/custom_radar_sensor_2/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "_TZE284_debczeci"
+        ],
+        "productId": [
+          "TS0601"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              61184
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/custom_radar_sensor_2/assets/icon.svg",
+          "instruction": {
+            "en": "Press the reset button for approximately 5 seconds until the LED blinks."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "radar_sensitivity",
+          "type": "dropdown",
+          "label": {
+            "en": "Radar Sensitivity"
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Low"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Medium"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "High"
+              }
+            }
+          ]
+        },
+        {
+          "id": "detection_time",
+          "type": "dropdown",
+          "label": {
+            "en": "Detection Time"
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "30 seconds"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "60 seconds"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "90 seconds"
+              }
+            }
+          ]
+        },
+        {
+          "id": "batteryThreshold",
+          "type": "number",
+          "label": {
+            "en": "Battery Alarm Threshold (%)"
+          },
+          "value": 20,
+          "min": 5,
+          "max": 50,
+          "step": 1,
+          "hint": {
+            "en": "Battery level below this threshold will trigger a low battery alarm."
+          }
+        }
+      ]
+    },
+    {
       "class": "light",
       "platforms": [
         "local"
