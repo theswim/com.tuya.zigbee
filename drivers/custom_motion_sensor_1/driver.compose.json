@@ -1,0 +1,66 @@
+{
+  "id": "custom_motion_sensor_1",
+  "name": {
+    "en": "Motion Sensor + WLTH"
+  },
+  "class": "sensor",
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
+  "capabilities": [
+    "measure_battery",
+    "alarm_battery",
+    "alarm_motion",
+    "measure_temperature",
+    "measure_humidity",
+    "measure_luminance"
+  ],
+  "energy": {
+    "batteries": [
+      "AAA",
+      "AAA"
+    ]
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "_TZE200_rhgsbacq"
+    ],
+    "productId": [
+      "TS0601"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          1,
+          1024,
+          1026,
+          1029,
+          1280,
+          61184
+        ],
+        "bindings": [
+          1,
+          1024,
+          1026,
+          1029,
+          1280,
+          61184
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/icon.svg",
+      "instruction": {
+        "en": "Put the device in pairing mode (usually by holding the reset button ~5 seconds until it blinks)."
+      }
+    }
+  }
+}

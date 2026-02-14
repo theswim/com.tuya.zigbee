@@ -1,0 +1,98 @@
+[
+  {
+    "id": "batteryThreshold",
+    "type": "number",
+    "label": {
+      "en": "Battery Low Alarm Threshold (%)"
+    },
+    "hint": {
+      "en": "Battery alarm is set when battery percentage goes below this value."
+    },
+    "value": 20,
+    "attr": {
+      "step": 1,
+      "min": 5,
+      "max": 90
+    }
+  },
+  {
+    "id": "temperature_offset",
+    "type": "number",
+    "label": {
+      "en": "Temperature calibration (\u00b0C)"
+    },
+    "hint": {
+      "en": "This offset is added to the measured temperature."
+    },
+    "value": 0,
+    "attr": {
+      "step": 0.1,
+      "min": -10,
+      "max": 10
+    }
+  },
+  {
+    "id": "humidity_offset",
+    "type": "number",
+    "label": {
+      "en": "Humidity calibration (%RH)"
+    },
+    "hint": {
+      "en": "This offset is added to the measured humidity."
+    },
+    "value": 0,
+    "attr": {
+      "step": 0.1,
+      "min": -20,
+      "max": 20
+    }
+  },
+  {
+    "id": "illuminance_sampling_interval_minutes",
+    "type": "number",
+    "label": {
+      "en": "Illuminance sampling interval (minutes)"
+    },
+    "hint": {
+      "en": "Only update the luminance capability at most once per interval (1-480 minutes)."
+    },
+    "value": 1,
+    "attr": {
+      "step": 1,
+      "min": 1,
+      "max": 480
+    }
+  },
+  {
+    "id": "presence_time_seconds",
+    "type": "number",
+    "label": {
+      "en": "Presence time (seconds)"
+    },
+    "hint": {
+      "en": "If the sensor does not report motion end, Homey will auto-clear motion after this time. Factory default is typically 30 seconds."
+    },
+    "value": 30,
+    "attr": {
+      "step": 1,
+      "min": 1,
+      "max": 1500
+    }
+  },
+  {
+    "id": "motion_sensitivity",
+    "type": "number",
+    "label": {
+      "en": "Motion sensitivity"
+    },
+    "hint": {
+      "en": "Sensitivity level (0-19). Whether this is applied to the device depends on the supported Tuya datapoints."
+    },
+    "value": 12,
+    "attr": {
+      "step": 1,
+      "min": 0,
+      "max": 19
+    }
+  }
+]
