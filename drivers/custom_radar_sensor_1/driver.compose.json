@@ -1,0 +1,34 @@
+{
+  "id": "custom_radar_sensor_1",
+  "name": {
+    "en": "24GHz mmWave Presence Sensor (Battery)",
+    "nl": "24GHz mmWave Presence Sensor (Battery)"
+  },
+  "class": "sensor",
+  "platforms": ["local"],
+  "connectivity": ["zigbee"],
+  "capabilities": [
+    "alarm_motion"
+  ],
+  "zigbee": {
+    "manufacturerName": [
+      "_TZE200_ka8l86iu"
+    ],
+    "productId": [
+      "TS0601"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [0, 61184],
+        "bindings": [61184]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/icon.svg",
+      "instruction": {
+        "en": "Press and hold the reset button until the LED blinks to enter pairing mode.",
+        "nl": "Houd de resetknop ingedrukt totdat de LED knippert om te koppelen."
+      }
+    }
+  }
+}

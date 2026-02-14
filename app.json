@@ -2542,6 +2542,128 @@
       ]
     },
     {
+      "id": "custom_radar_sensor_1",
+      "name": {
+        "en": "24GHz mmWave Presence Sensor (Battery)",
+        "nl": "24GHz mmWave Presence Sensor (Battery)"
+      },
+      "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "capabilities": [
+        "alarm_motion"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "_TZE200_ka8l86iu"
+        ],
+        "productId": [
+          "TS0601"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              61184
+            ],
+            "bindings": [
+              61184
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/custom_radar_sensor_1/assets/icon.svg",
+          "instruction": {
+            "en": "Press and hold the reset button until the LED blinks to enter pairing mode.",
+            "nl": "Houd de resetknop ingedrukt totdat de LED knippert om te koppelen."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "presence_keep_time",
+          "type": "number",
+          "label": {
+            "en": "Presence keep time",
+            "nl": "Aanwezigheid houdtijd"
+          },
+          "hint": {
+            "en": "Time in seconds before presence clears after no movement.",
+            "nl": "Tijd in seconden voordat aanwezigheid wordt gewist zonder beweging."
+          },
+          "value": 30,
+          "min": 0,
+          "max": 1500,
+          "step": 1,
+          "units": {
+            "en": "seconds",
+            "nl": "seconden"
+          }
+        },
+        {
+          "id": "mw_radar_detection_distance",
+          "type": "number",
+          "label": {
+            "en": "MW radar detection distance",
+            "nl": "MW radar detectieafstand"
+          },
+          "hint": {
+            "en": "Maximum detection distance in centimeters.",
+            "nl": "Maximale detectieafstand in centimeters."
+          },
+          "value": 500,
+          "min": 0,
+          "max": 500,
+          "step": 1,
+          "units": {
+            "en": "cm",
+            "nl": "cm"
+          }
+        },
+        {
+          "id": "motion_detection_sensitivity",
+          "type": "number",
+          "label": {
+            "en": "Motion detection sensitivity",
+            "nl": "Bewegingsgevoeligheid"
+          },
+          "value": 6,
+          "min": 0,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "id": "stationary_detection_sensitivity",
+          "type": "number",
+          "label": {
+            "en": "Stationary detection sensitivity",
+            "nl": "Stilstandgevoeligheid"
+          },
+          "value": 8,
+          "min": 0,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "id": "anti_interference",
+          "type": "checkbox",
+          "label": {
+            "en": "Anti-interference",
+            "nl": "Anti-interferentie"
+          },
+          "hint": {
+            "en": "Enable to reduce interference in challenging environments.",
+            "nl": "Inschakelen om interferentie te verminderen."
+          },
+          "value": false
+        }
+      ]
+    },
+    {
       "class": "light",
       "platforms": [
         "local"
